@@ -41,21 +41,21 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             A showcase of my recent work demonstrating various technologies and problem-solving approaches
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={project.title} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
+            <Card key={project.title} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden bg-white dark:bg-gray-800">
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
@@ -66,10 +66,10 @@ const Projects = () => {
               </div>
               
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-gray-900">
+                <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-gray-600 leading-relaxed">
+                <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {project.description}
                 </CardDescription>
               </CardHeader>
@@ -79,7 +79,7 @@ const Projects = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium"
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-sm rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -88,11 +88,11 @@ const Projects = () => {
               </CardContent>
 
               <CardFooter className="flex gap-3">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button variant="outline" size="sm" className="flex-1 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">
                   <Github className="mr-2 h-4 w-4" />
                   Code
                 </Button>
-                <Button size="sm" className="flex-1 bg-blue-600 hover:bg-blue-700">
+                <Button size="sm" className="flex-1 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white">
                   <Linkedin className="mr-2 h-4 w-4" />
                   Live Demo
                 </Button>
@@ -102,7 +102,7 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+          <Button variant="outline" size="lg" className="border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20">
             <Github className="mr-2 h-5 w-5" />
             View All Projects on GitHub
           </Button>
