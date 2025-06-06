@@ -8,6 +8,7 @@ import Contact from '../components/Contact';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ThemeProvider } from '../contexts/ThemeContext';
+import { Toaster } from '@/components/ui/toaster';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <Projects />
         <Contact />
         <Footer />
+        <Toaster />
       </div>
     </ThemeProvider>
   );
