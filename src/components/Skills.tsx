@@ -18,13 +18,13 @@ const Skills = () => {
   ];
 
   const SkillCategory = ({ title, skills, bgColor }: { title: string; skills: string[]; bgColor: string }) => (
-    <div className={`p-6 rounded-xl shadow-lg ${bgColor} hover:shadow-xl transition-shadow duration-300`}>
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">{title}</h3>
-      <div className="grid grid-cols-2 gap-2">
+    <div className={`p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg ${bgColor} hover:shadow-xl transition-shadow duration-300`}>
+      <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 text-center">{title}</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
         {skills.map((skill, index) => (
           <div
             key={skill}
-            className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-lg p-2 text-sm text-center font-medium text-gray-800 dark:text-gray-200 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-colors duration-200"
+            className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-lg p-2 sm:p-3 text-xs sm:text-sm lg:text-base text-center font-medium text-gray-800 dark:text-gray-200 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-colors duration-200"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             {skill}
@@ -35,19 +35,19 @@ const Skills = () => {
   );
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
+    <section id="skills" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Technical Skills
           </h2>
-          <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+          <div className="w-16 sm:w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300 max-w-xs sm:max-w-md lg:max-w-2xl mx-auto px-4">
             A comprehensive toolkit for building modern, scalable web applications
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           <SkillCategory 
             title="Frontend Development" 
             skills={frontendSkills} 
