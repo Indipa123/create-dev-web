@@ -1,20 +1,13 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
+  return <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full text-center">
         <div className="animate-fade-in">
           {/* Profile Image */}
           <div className="mb-6 sm:mb-8">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
-              alt="Professional headshot"
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mx-auto shadow-2xl border-4 border-white dark:border-gray-300"
-            />
+            <img alt="Professional headshot" className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mx-auto shadow-2xl border-4 border-white dark:border-gray-300" src="/lovable-uploads/deca2a1f-f875-41fa-8d80-a8f580674b4c.jpg" />
           </div>
 
           {/* Introduction */}
@@ -46,33 +39,18 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-4 sm:space-x-6">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-            >
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Github size={24} className="sm:w-7 sm:h-7" />
             </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-            >
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
               <Linkedin size={24} className="sm:w-7 sm:h-7" />
             </a>
-            <a
-              href="mailto:alex@example.com"
-              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-            >
+            <a href="mailto:alex@example.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
               <Mail size={24} className="sm:w-7 sm:h-7" />
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
