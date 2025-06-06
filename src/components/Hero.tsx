@@ -12,18 +12,14 @@ const Hero = () => {
 
           {/* Introduction */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
-            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Alex Johnson</span>
+            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Indipa Ayomal</span>
           </h1>
           
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 px-2">
             Full-Stack Developer & Computer Science Student
           </h2>
           
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-4">
-            Passionate about creating innovative web solutions with modern technologies. 
-            Currently pursuing Computer Science at University, specializing in web development 
-            and software engineering.
-          </p>
+          <p className="text-base sm:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-4">Passionate about creating innovative web solutions with modern technologies. Currently pursuing Bachelor of Computing at Coventry University, specializing in web development and software engineering.</p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
