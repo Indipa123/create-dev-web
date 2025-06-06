@@ -19,14 +19,14 @@ const About = () => {
             </h3>
             
             <p className="text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I'm a passionate Computer Science student with a deep love for creating 
-              innovative web applications. My journey began with curiosity about how 
+              I'm a passionate Computer Science undergraduate with a deep love for creating 
+              innovative web applications and mobile applications. My journey began with curiosity about how 
               websites work, and it has evolved into a comprehensive understanding of 
               full-stack development.
             </p>
             
             <p className="text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Currently pursuing my degree in Computer Science, I've developed expertise 
+              Currently pursuing my degree in computing at coventry university, I've developed expertise 
               in both frontend and backend technologies. I enjoy solving complex problems 
               and building user-centric applications that make a real difference.
             </p>
