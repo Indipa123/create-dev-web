@@ -16,18 +16,34 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 px-2">
-            Full-Stack Developer & Computer Science Student
+            Full-Stack Developer & Mobile App Developer
           </h2>
           
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-4">Passionate about creating innovative web solutions with modern technologies. Currently pursuing Bachelor of Computing at Coventry University, specializing in web development and software engineering.</p>
+          <p className="text-base sm:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-4">Passionate about creating innovative web solutions and mobile app solutions with modern technologies. Currently pursuing Bachelor of Computing at Coventry University, specializing in web development and software engineering.</p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-6 sm:px-8 py-3 w-full sm:w-auto text-sm sm:text-base">
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-6 sm:px-8 py-3 w-full sm:w-auto text-sm sm:text-base"
+              onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+              }}
+            >
               <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Get In Touch
             </Button>
-            <Button variant="outline" size="lg" className="border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-6 sm:px-8 py-3 w-full sm:w-auto text-sm sm:text-base">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-6 sm:px-8 py-3 w-full sm:w-auto text-sm sm:text-base"
+              onClick={() => {
+              window.open('/Indipa Ayomal Resume.pdf', '_blank');
+              }}
+            >
               <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Download Resume
             </Button>
@@ -35,13 +51,28 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-4 sm:space-x-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+            <a
+              href="https://github.com/Indipa123"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+            >
               <Github size={24} className="sm:w-7 sm:h-7" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+            <a
+              href="https://www.linkedin.com/in/indipa-ayomal-8733522ab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            >
               <Linkedin size={24} className="sm:w-7 sm:h-7" />
             </a>
-            <a href="mailto:alex@example.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=indipa2002ayomal@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            >
               <Mail size={24} className="sm:w-7 sm:h-7" />
             </a>
           </div>

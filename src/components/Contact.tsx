@@ -76,7 +76,7 @@ const Contact = () => {
                 </div>
                 <div className="min-w-0">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm lg:text-base break-all">alex.johnson@example.com</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm lg:text-base break-all">indipa2002ayomal@gmail.com</p>
                 </div>
               </div>
 
@@ -86,7 +86,7 @@ const Contact = () => {
                 </div>
                 <div className="min-w-0">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">GitHub</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm lg:text-base break-all">github.com/alexjohnson</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm lg:text-base break-all">github.com/Indipa123 </p>
                 </div>
               </div>
 
@@ -96,7 +96,7 @@ const Contact = () => {
                 </div>
                 <div className="min-w-0">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">LinkedIn</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm lg:text-base break-all">linkedin.com/in/alexjohnson</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm lg:text-base break-all">linkedin.com/in/indipa-ayomal</p>
                 </div>
               </div>
             </div>
@@ -109,73 +109,112 @@ const Contact = () => {
                 Send a Message
               </CardTitle>
             </CardHeader>
-            <CardContent className="p-4 sm:p-6 pt-0">
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="Your name"
-                      className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 text-sm sm:text-base"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Email</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="your.email@example.com"
-                      className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 text-sm sm:text-base"
-                    />
-                  </div>
-                </div>
+<CardContent className="p-4 sm:p-6 pt-0">
+  <form
+    onSubmit={async (e) => {
+      e.preventDefault();
+      try {
+        const response = await fetch("https://formspree.io/f/xgvyakyn", {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+        });
+        if (response.ok) {
+          toast({
+            title: "Message sent!",
+            description: "Thank you for your message. I'll get back to you soon!",
+          });
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
+        } else {
+          toast({
+            title: "Error",
+            description: "Something went wrong. Please try again later.",
+            variant: "destructive"
+          });
+        }
+      } catch {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again later.",
+          variant: "destructive"
+        });
+      }
+    }}
+    className="space-y-4 sm:space-y-6"
+  >
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+      <div className="space-y-2">
+        <Label htmlFor="name" className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Name</Label>
+        <Input
+          id="name"
+          name="name"
+          required
+          placeholder="Your name"
+          value={formData.name}
+          onChange={handleChange}
+          className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 text-sm sm:text-base"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="email" className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Email</Label>
+        <Input
+          id="email"
+          name="email"
+          type="email"
+          required
+          placeholder="your.email@example.com"
+          value={formData.email}
+          onChange={handleChange}
+          className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 text-sm sm:text-base"
+        />
+      </div>
+    </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    placeholder="Project inquiry, collaboration, etc."
-                    className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 text-sm sm:text-base"
-                  />
-                </div>
+    <div className="space-y-2">
+      <Label htmlFor="subject" className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Subject</Label>
+      <Input
+        id="subject"
+        name="subject"
+        required
+        placeholder="Project inquiry, collaboration, etc."
+        value={formData.subject}
+        onChange={handleChange}
+        className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 text-sm sm:text-base"
+      />
+    </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Tell me about your project or how I can help..."
-                    rows={4}
-                    className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 text-sm sm:text-base resize-none"
-                  />
-                </div>
+    <div className="space-y-2">
+      <Label htmlFor="message" className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Message</Label>
+      <Textarea
+        id="message"
+        name="message"
+        required
+        placeholder="Tell me about your project or how I can help..."
+        rows={4}
+        value={formData.message}
+        onChange={handleChange}
+        className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 text-sm sm:text-base resize-none"
+      />
+    </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white text-sm sm:text-base"
-                  size="lg"
-                >
-                  <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
+    <Button 
+      type="submit" 
+      className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white text-sm sm:text-base"
+      size="lg"
+    >
+      <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+      Send Message
+    </Button>
+  </form>
+</CardContent>
           </Card>
         </div>
       </div>

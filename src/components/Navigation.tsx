@@ -30,7 +30,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
           <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
-            <span className="text-blue-600 dark:text-blue-400">Dev</span>Portfolio
+            <span className="text-blue-600 dark:text-blue-400">Indipa</span>Portfolio
           </div>
 
           {/* Desktop Navigation */}

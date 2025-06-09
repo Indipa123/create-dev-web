@@ -3,18 +3,18 @@ import React from 'react';
 
 const Skills = () => {
   const frontendSkills = [
-    'HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'React', 
-    'Angular', 'Vue.js', 'Tailwind CSS', 'Bootstrap', 'Sass/SCSS'
+    'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 
+    'NUXT', 'Vue.js', 'Tailwind CSS', 'Bootstrap','XML' , 'Flutter' , 'Flowbite'
   ];
 
   const backendSkills = [
-    'Node.js', 'Express.js', 'Python', 'Django', 'MongoDB', 
-    'PostgreSQL', 'MySQL', 'RESTful APIs', 'GraphQL', 'Firebase'
+    'Node.js', 'Express.js', 'Python', 'MongoDB', 'Laravel', 'Sql Lite',
+    'Spring Boot', 'MySQL', 'RESTful APIs', 'Postman', 'Firebase'               
   ];
 
   const toolsSkills = [
-    'Git & GitHub', 'Docker', 'AWS', 'Vercel', 'Netlify', 
-    'Jest', 'Cypress', 'Webpack', 'Vite', 'npm/yarn'
+    'Git & GitHub', 'Vercel', 'Netlify', 'Figma',
+    'Jira', 'Vite', 'npm'
   ];
 
   const SkillCategory = ({ title, skills, bgColor }: { title: string; skills: string[]; bgColor: string }) => (
@@ -43,7 +43,7 @@ const Skills = () => {
           </h2>
           <div className="w-16 sm:w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-4 sm:mb-6"></div>
           <p className="text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300 max-w-xs sm:max-w-md lg:max-w-2xl mx-auto px-4">
-            A comprehensive toolkit for building modern, scalable web applications
+            A comprehensive toolkit for building modern, scalable web applications and mobile applications.
           </p>
         </div>
 
