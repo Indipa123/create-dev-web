@@ -16,7 +16,7 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 px-2">
-            Full-Stack Developer & Mobile App Developer
+            Web & Mobile App Developer
           </h2>
           
           <p className="text-base sm:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-4">Passionate about creating innovative web solutions and mobile app solutions with modern technologies. Currently pursuing Bachelor of Computing at Coventry University, specializing in web development and software engineering.</p>
