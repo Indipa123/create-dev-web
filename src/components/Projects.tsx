@@ -23,14 +23,14 @@ const Projects = () => {
     {
       title: "Food Delivery App",
       description: "A mobile-first food delivery application with restaurant listings, order tracking, and user reviews. Built with XML & SQLLite.",
-      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jx9vydezf0etm6mhkwcbx7xw%2F1749456824_img_1.webp?st=2025-06-09T06%3A52%3A31Z&se=2025-06-15T07%3A52%3A31Z&sks=b&skt=2025-06-09T06%3A52%3A31Z&ske=2025-06-15T07%3A52%3A31Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=YkJvbLknNLO5CpAAY%2FEP1w4iBH7Nj%2BzKiJBlFF1lVgc%3D&az=oaivgprodscus",
+      image: "assets/img/foodapp.png",
       tech: ["XML", "SQLLite", "Java", "Android Studio"],
       githubUrl: "https://github.com/Indipa123/My-food-app.git"
     },
     {
       title: "Healthcare Management App",
       description: "A healthcare management App for patient records, patient report management, and all pharmacy features. Built with Flutter and node.js backend.",
-      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jx9wyqw6fwea0n6kbwx2kn7h%2F1749457862_img_0.webp?st=2025-06-09T06%3A51%3A16Z&se=2025-06-15T07%3A51%3A16Z&sks=b&skt=2025-06-09T06%3A51%3A16Z&ske=2025-06-15T07%3A51%3A16Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=oT3Xc1EH4EGS6DtQvzgZfXu%2FnmmqMTUoFn6i%2ByQEALI%3D&az=oaivgprodscus",
+      image: "assets/img/healthapp.png",
       tech: ["React", "Node.js", "express", "flutter", "MySQL"],
       githubUrl: "https://github.com/Indipa123/healthcare.git"
     }
