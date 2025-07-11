@@ -28,10 +28,10 @@ const Projects = () => {
       githubUrl: "https://github.com/Indipa123/My-food-app.git"
     },
     {
-      title: "Healthcare Management App",
+      title: "Healthcare Management App ",
       description: "A healthcare management App for patient records, patient report management, and all pharmacy features. Built with Flutter and node.js backend.",
       image: "assets/img/healthapp.png",
-      tech: ["React", "Node.js", "express", "flutter", "MySQL"],
+      tech: ["React", "Node.js", "express", "flutter", "MySQL" ,"Postman"],
       githubUrl: "https://github.com/Indipa123/healthcare.git"
     }
   ];
