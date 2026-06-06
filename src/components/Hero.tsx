@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           {/* Profile Image */}
           <div className="mb-6 sm:mb-8">
-            <img alt="Professional headshot" className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mx-auto shadow-2xl border-4 border-white dark:border-gray-300" src="/lovable-uploads/deca2a1f-f875-41fa-8d80-a8f580674b4c.jpg" />
+            <img alt="Professional headshot" className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mx-auto shadow-2xl border-4 border-white dark:border-gray-300" src="/uploads/deca2a1f-f875-41fa-8d80-a8f580674b4c.jpg" />
           </div>
 
           {/* Introduction */}
